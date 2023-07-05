@@ -8,7 +8,7 @@ import List from "./components/List/List";
 class App extends Component {
   
   state = {
-    isModleOpen: true
+    isModleOpen: false
   }
 
   closeModel = () => {
@@ -25,7 +25,7 @@ class App extends Component {
         <h1>React Animations</h1>
         <Modal isOpen={this.state.isModleOpen} closed={this.closeModel} />
         <Backdrop isOpen={this.state.isModleOpen} />
-        <button className="Button">Open Modal</button>
+        <button onClick={this.openModel} className="Button">Open Modal</button>
         <h3>Animating Lists</h3>
         <List />
       </div>
