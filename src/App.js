@@ -6,12 +6,25 @@ import Backdrop from "./components/Backdrop/Backdrop";
 import List from "./components/List/List";
 
 class App extends Component {
+  
+  state = {
+    isModleOpen: true
+  }
+
+  closeModel = () => {
+    this.setState({isModleOpen:  false});
+  }
+
+  openModel = () => {
+    this.setState({isModleOpen:  true});
+  }
+
   render() {
     return (
       <div className="App">
         <h1>React Animations</h1>
-        <Modal />
-        <Backdrop />
+        <Modal isOpen={this.state.isModleOpen} closed={this.closeModel} />
+        <Backdrop isOpen={this.state.isModleOpen} />
         <button className="Button">Open Modal</button>
         <h3>Animating Lists</h3>
         <List />
