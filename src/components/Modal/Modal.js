@@ -13,6 +13,13 @@ const Modal = (props) =>  {
         timeout={animationTimeOut}
         mountOnEnter
         unmountOnExit
+        onEnter={() => {console.log('on Enter')}}
+        onEntering={() => {console.log('on Entering')}}
+        onEntered={() => {console.log('on Entered')}}
+        onExit={() => {console.log('on Exit')}}
+        onExiting={() => {console.log('on Exiting')}}
+        onExited={() => {console.log('on Exited')}}
+
         >
             {(state) => {
                 const cssClasses = [
