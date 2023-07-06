@@ -42,7 +42,16 @@ const Modal = (props) =>  {
       unmountOnExit 
       in={props.isOpen} 
       timeout={animationTimeOut}
-      classNames='fade-slide'>
+
+      // the  properties in this object  is the state on which the component is.
+      // so you can add different css classes on the different state to have transition and animation and stuff.
+      
+      classNames={{
+        enter: '',
+        exit: '',
+        enterActive: 'ModalOpen',
+        exitActive: 'ModalClosed'
+      }}>
         <div className="Modal">
           <h1>A Modal</h1>
           <button className="Button" onClick={props.closed}>

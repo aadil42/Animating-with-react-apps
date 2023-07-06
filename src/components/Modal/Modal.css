@@ -13,14 +13,14 @@
     transition: all .3s ease-out;
 }
 
-/* .ModalOpen {
+.ModalOpen {
     animation: openModal 0.4s ease-out forwards;
 }
 
 .ModalClosed {
     animation: closeModal 0.4s ease-out forwards;
     z-index: -100;
-} */
+}
 
 .fade-slide-enter-active {
     animation: openModal 0.4s ease-out forwards;
